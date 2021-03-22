@@ -4,9 +4,6 @@
 3. No harm will be done with this file. You can turn off the defender for some time in to run this exe file.
 4. If you are unable to dounload from github then download this from this <a href="https://drive.google.com/file/d/1VyuCPR44vMf1bZPz7oAgzR6kFO-bLU6y/view?usp=sharing">Google Drive link </a>
 
-## <u>If you see the dialogue box shown in below pictures, then do the following</u>
-1. Click on <u><b>More Info</b></u>.
-2. Click on <u><b>Run Anyway</b></u> button.
 
 
 <centre><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/readme_assets/D1.PNG" height="400" width="400"></centre>
