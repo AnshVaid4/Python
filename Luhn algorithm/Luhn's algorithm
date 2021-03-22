@@ -54,4 +54,4 @@ card(num)
         strin="invalid"
         return strin
 #a=1212343456567878
-print(card(a))
+print(card(num))
