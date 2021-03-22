@@ -8,6 +8,11 @@
 1. Click on <u><b>More Info</b></u>.
 2. Click on <u><b>Run Anyway</b></u> button.
 
+<<<<<<< HEAD
 <centre><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D1.PNG" height="400" width="400"></centre>
 <centre><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D2.PNG" height="400" width="400"></centre>
+=======
+<center><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/readme_assets/D1.PNG" height="400" width="400"></center>
+<center><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/readme_assets/D2.PNG" height="400" width="400"></center>
+>>>>>>> 192012aec8951b73db51c052fe90874d0df2dbc0
 
