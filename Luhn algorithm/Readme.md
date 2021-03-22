@@ -5,8 +5,8 @@
 4. If you are unable to dounload from github then download this from this <a href="https://drive.google.com/file/d/1VyuCPR44vMf1bZPz7oAgzR6kFO-bLU6y/view?usp=sharing">Google Drive link </a>
 
 ## If you see this type of dialogue box then do the following
-<img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D1.PNG">
-<img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D2.PNG">
+<center><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D1.PNG" height="250" width="250"></center>
+<center><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D2.PNG" height="250" width="250"></center>
 
 1. Click on <u><b>More Info</b></u>.
 2. Click on <u><b>Run Anyway</b></u> button.
