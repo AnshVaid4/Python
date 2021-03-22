@@ -45,7 +45,7 @@ def card(num):
         sumeven=sumeven+i
 #print(sumodd)
 #print(sumeven)
-card(num)
+#card(num)
 
     if((sumodd+sumeven)%10==0):
         strin="valid"
