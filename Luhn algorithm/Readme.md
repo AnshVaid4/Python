@@ -9,7 +9,7 @@
 2. Click on <u><b>Run Anyway</b></u> button.
 
 
-<img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D1.PNG" height="400" width="400">
-<img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/asset/D2.PNG" height="400" width="400">
+<centre><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/readme_assets/D1.PNG" height="400" width="400"></centre>
+<centre><img src="https://github.com/AnshVaid4/Python/blob/master/Luhn%20algorithm/readme_assets/D2.PNG" height="400" width="400"></centre>
 
 
