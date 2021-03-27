@@ -26,7 +26,7 @@ def Main():
     zname=input("Enter the name of password protected zip file: ")
     dname=input("Enter the name of dictionary file: ")
     if((zname == "" ) | (dname== "")):
-       print("The above two values are required. Come back later")
+       print("[-] The above two values are required. Come back later")
        time.sleep(15)
        exit(0)
     try:
@@ -40,7 +40,7 @@ def Main():
         time.sleep(15)
         exit(0)
     except:
-        print("No file found with above names")
+        print("[-] Something went wrong")
         time.sleep(15)
         exit(0)
 
