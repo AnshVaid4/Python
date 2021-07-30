@@ -1,0 +1,26 @@
+from socket import *
+import os
+def serve():
+    sock=socket(AF_INET,SOCK_STREAM)
+    os.system('systemctl start apache2')
+    hname=gethostname()
+    print(hname)
+    #IP=gethostbyname(hname)
+    IP="<LOCAL IP OF YOUR SERVER MACHINE"
+    print("Local IP is "+IP)
+    sock.bind((IP,4444))
+    sock.listen(5)
+    print("Started listening at port 4444")
+    (connection,address)=sock.accept()
+    print("Client connected from IP "+str(address))
+    while True:
+        data=connection.recv(600)
+        if not data:
+            break
+        else:
+            #connection.send("Message Received:")
+            print("Message from client "+str(address)+" is: " +str(data))
+    connection.close()
+
+serve()
+

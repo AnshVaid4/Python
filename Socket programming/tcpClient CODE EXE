@@ -1,0 +1,13 @@
+from socket import *
+def con():
+    sock=socket(AF_INET,SOCK_STREAM)
+    IP=input("Enter the IP address of server ")
+    port=eval(input("Enter Pport number of server "))
+    sock.connect((IP,port))
+    print("Connection is successfully made") 
+    sock.send(str.encode('hello there'))
+    print("Message sent")
+    data=sock.recv(600)
+    sock.close()
+    print("Data received "+str(data))
+con()

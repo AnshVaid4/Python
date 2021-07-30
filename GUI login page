@@ -1,0 +1,160 @@
+#*************************************************************************************S T A R T***************************************************************************************#
+
+import winsound
+from tkinter import *
+from tkinter import messagebox
+import time
+
+#===============================================================================GUI STARTS
+window=Tk()
+window.geometry("1000x600+250+130")
+window.resizable(0,0)
+window.title("EXPENSE TRACKER")
+
+#================================================================================GLOBALS
+count=1
+#data={'AV04':'hello','PY':'1234'}
+def insfile(user,passw):
+    file1=open(r'C:\Users\Ansh Vaid\Desktop\PY_PROJECT\DATA.txt','r')
+    l=file1.read()
+    g=l.splitlines()
+    g.append(user)
+    g.append(passw)
+    k='\n'.join(g)
+    file1.close()
+    file1=open(r'C:\Users\Ansh Vaid\Desktop\PY_PROJECT\DATA.txt','w')
+    file1.write(k)
+    file1.close()
+
+#=================================================================================PHOTO
+bgPhoto=PhotoImage(file=r"C:\Users\Ansh Vaid\Desktop\PY_PROJECT\Cap.png")
+p=Label(window,image=bgPhoto)
+p.pack()
+
+#==================================================================================CANVAS
+C=Canvas(window,width=500,height=220,bg="white")
+C.place(x=250,y=200)
+
+#===================================================================================CREATE TEXT ON WINDOW
+C.create_text(252,30,fill="gray10",font="Times 15 bold underline",text="Enter Valid Username And Password to Access the System")
+C.update
+C.create_text(120,100,font="Cambria",text="USERNAME:")              #username
+C.update
+C.create_text(120,125,font="Cambria",text="PASSWORD:")              #password
+C.update
+
+G=Label(text='EXPENSE TRACKER',bg='white',font=('Copperplate Gothic Bold',20,'underline'),width=50)
+G.place(x=0,y=0)
+
+#=======================================================================================ENTRY BOXES
+
+entry1 = Entry (window,bd='3',width=25,highlightthickness=1,highlightbackground='black', highlightcolor='blue')
+entry1.insert(0, "USERNAME")
+entry2 = Entry (window,bd='3',show='*',width=25,highlightthickness=1,highlightbackground='black', highlightcolor='blue')
+entry2.insert(0, "PASSWORD")
+C.create_window(255, 100, window=entry1)
+C.create_window(255, 125, window=entry2)
+
+#========================================================================================Function to check...
+def do():
+    global count
+    #global data
+    file1=open(r'C:\Users\Ansh Vaid\Desktop\PY_PROJECT\DATA.txt','r')
+    m=file1.read()
+    g=m.splitlines()
+    if count<=3:
+        k=1
+        if entry1.get() in g and g.index(entry1.get())%2!=0:            #Username Present In DATA or not
+            k=g[g.index(entry1.get())+1]               #If present then extract password
+            entry1.configure(highlightbackground='black', highlightcolor='black')
+            if  entry2.get()==k :                       #If username is correct then password should match
+                #print("correct")                       #If password Matched then Display new window
+                newwin = Toplevel(window)
+                display = Label(newwin, text="Humm, see a new window !")
+                newwin.geometry("1000x800")
+                display.pack()
+                #window.destroy()
+                window.mainloop()
+            else:
+                for i in range(0,count):
+                    winsound.Beep(2500,250)
+                count=count+1
+                a=4-count
+                t='You have '+str(a)+' chances left'
+                l1.config(text=t,fg='red',bg='white')
+                entry2.configure(highlightbackground='red', highlightcolor='red')
+                l.config(text='PASSWORD IS INCORRECT',fg='red',bg='white')
+
+        else:
+            for i in range(0,count):
+                    winsound.Beep(2500,250)                #Not present then display invalid username
+            count=count+1
+            a=4-count
+            t='You have '+str(a)+' chances left'
+            l1.config(text=t,fg='red',bg='white')
+            entry1.configure(highlightbackground='red', highlightcolor='red')
+            l.config(text='USERNAME IS INCORRECT',fg='red',bg='white')
+
+                           
+    elif(count>=4):
+        #x='THIS SOFTWARE AUTOMATICALLY TERMINATES 1 SECONDS'
+        #l2.config(text=x,fg='red',bg='white',font=("Times New Roman",30))
+        winsound.Beep(2500,1000)
+        time.sleep(1)
+        sys.exit()
+
+def add():
+    #global data
+    file1=open(r'C:\Users\Ansh Vaid\Desktop\PY_PROJECT\DATA.txt','r')
+    m=file1.read()
+    g=m.splitlines()
+    if entry1.get() in g and g.index(entry1.get())%2!=0:                        #if username exist
+        entry1.configure(highlightbackground='red', highlightcolor='red')
+        ll.config(text='USER EXIST',fg='red',bg='white')
+        file1.close()
+    else:
+        found=False                     
+        for ch in entry1.get():                     #check if entry box is empty               
+            if(ch!=' '):
+                found=True
+        if(found==True):                            #if entry box is not empty
+            file1.close()
+            insfile(entry1.get(),entry2.get())
+            entry1.configure(highlightbackground='green', highlightcolor='green')
+            ll.config(text='INFO ADDED',fg='green',bg='white')
+            l.config(text=' ',bg='white')
+        else:                                       #if entry box is empty
+            ll.config(text='VALUE NEEDED',fg='red',bg='white')
+            l.config(text=' ',bg='white')
+        
+
+l2=Label(text='*This software will be forceully shut down on 4th SUBMIT even if your credentials are correct',fg='red',bg='white',font=("Times New Roman",6,'underline'))
+C.create_window(240, 50, window=l2)   # count=count+1
+
+B=Button(window,text='    SUBMIT    ',width=10,bd='2',command=do)
+C.create_window(215, 152, window=B)
+C.update
+
+
+D=Button(window,text='    REGISTER    ',bd='2',width=10,command=add)
+C.create_window(295, 152, window=D)
+C.update
+l=Label(bg='white')                                     #Password or Username is incorrect
+C.create_window(220, 180, window=l)
+
+l1=Label(bg='white')                                    #Displays number of chances left
+C.create_window(220, 70, window=l1)
+
+C.update()
+
+ll=Label(bg='white')                                    #If username exist or not
+C.create_window(380, 100, window=ll)
+C.update()
+
+#######################################################################3if count<=3:
+#######################################################################goto .again
+window.mainloop()
+
+#****************************************************************************************E N D********************************************************************************************#
+
+

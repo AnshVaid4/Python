@@ -1,0 +1,57 @@
+num=int(input("Enter card number "))
+print("Entered card number is " + str(num))
+def card(num):
+    e=list()
+    o=list()
+    odd=list()
+    even=list()
+    a= [int(x) for x in str(num)]
+
+    for i in range (0,16):
+        if ( (i%2)!=0):
+            o.append(a[i])
+        
+        else:
+            e.append(a[i])
+#print(e)
+#print(o)
+
+    for i in e:
+        even.append(i*2)
+
+#print(odd)
+#print(even)
+
+
+    e=list()
+
+    a=0
+    b=0
+    for i in even:
+        if (i>9):
+            a=i//10
+            b=i%10
+            a=a+b
+     
+            e.append(a)
+        else:
+            e.append(i)
+
+    sumeven=0
+    sumodd=0
+    for i in o:
+        sumodd=sumodd+i
+    for i in e:
+        sumeven=sumeven+i
+#print(sumodd)
+#print(sumeven)
+#card(num)
+
+    if((sumodd+sumeven)%10==0):
+        strin="valid"
+        return strin
+    else:
+        strin="invalid"
+        return strin
+#a=1212343456567878
+print(card(num))
