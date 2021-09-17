@@ -1,4 +1,4 @@
-# Readme for exe file <a href="https://github.com/AnshVaid4/Python/blob/master/Port%20Scanner/For%20Windows/BasicPrtScanner.exe">BasicPrtScanner.exe</a>
+# Readme for exe file <a href="https://github.com/AnshVaid4/Python/blob/master/Port%20Scanner/For%20Windows/BasicPrtScanner.exe">Registry Forensics for Windows.exe</a>
 1. It is not a virus, so download and run it anyway. You can trust on it.
 2. It is suspected as malicious beacause it is not created by any known publisher. So in the headers, when publisher name is unknown then it is suspected as virus.
 3. No harm will be done with this file. You can turn off the defender for some time, to run this exe file.
