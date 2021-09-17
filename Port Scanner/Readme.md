@@ -1,8 +1,8 @@
 # Readme for exe file <a href="https://github.com/AnshVaid4/Python/blob/master/Port%20Scanner/For%20Windows/BasicPrtScanner.exe">BasicPrtScanner.exe</a>
 1. It is not a virus, so download and run it anyway. You can trust on it.
-2. It is suspected as malicious beacause it is not created by any known publisher. So in the headers, when publisher name is unknown then it is suspeced as virus.
-3. No harm will be done with this file. You can turn off the defender for some time in to run this exe file.
-4. If you are unable to dounload from github then download this from this <a href="https://drive.google.com/file/d/1HNqRgNP2Y7cjgoqzAy5xTvNkb3zSoIWE/view?usp=sharing">Google Drive link </a>
+2. It is suspected as malicious beacause it is not created by any known publisher. So in the headers, when publisher name is unknown then it is suspected as virus.
+3. No harm will be done with this file. You can turn off the defender for some time, to run this exe file.
+4. If you are unable to download from github then download this from this <a href="https://drive.google.com/file/d/1HNqRgNP2Y7cjgoqzAy5xTvNkb3zSoIWE/view?usp=sharing">Google Drive link </a>
 
 ## <u>If you see the dialogue box shown in below pictures, then do the following</u>
 1. Click on <u><b>More Info</b></u>.
