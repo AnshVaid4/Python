@@ -4,7 +4,7 @@
 3. No harm will be done with this file. You can turn off the defender for some time, to run this exe file.
 
 
-## <u>If you see the dialogue box shown in below pictures, then do the following</u>
+## <u>If you see the dialog box shown in below pictures, then do the following</u>
 1. Click on <u><b>More Info</b></u>.
 2. Click on <u><b>Run Anyway</b></u> button.
 
