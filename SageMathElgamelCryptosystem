@@ -1,0 +1,60 @@
+#This program is for Sage math cell, which uses python programming language, but dedicated for mathematical functions
+
+#Primitive root 'g' checker
+a=[]
+counter=0
+p=194813
+n=6
+for i in range(1,p):
+    #a.append((mod(n^i,p), i))
+    counter+=1
+    if(mod(n^i,p) ==1):
+        break
+if counter==euler_phi(p):
+    print('n= ',n,' is primitive')
+else:
+    print('n= ',n,' is not primitive')
+
+#----------------------------------------------------------------------------------------------
+
+#Elgamel encryption and decryption
+
+import random
+set_random_seed(22)
+p=194813
+g=2
+k=random_prime(10^2)
+
+print('p',p)
+print('g',g)
+print('k',k)
+
+a=mod(g^k,p)  
+print('a',mod(g^k,p))  #a, g and p are sent, k is secret key
+
+m=192746       #message smaller than p
+print('message to be encrypted',m)
+
+r=999999       #random number r
+print('r',r)
+e1=mod(g^r,p)
+print('e1',e1)
+
+e2=mod(m*(a^r),p)
+print('e2',e2)
+
+e1k=mod(e1^k,p)
+#print(e1k)
+x_gcd=xgcd(int(e1k),p)
+inv=mod(x_gcd[1],p)
+print('inverse of',int(e1k),' is ',inv)
+
+print('message',mod(inv*e2,p))
+
+print(mod(g^(r*k),p))
+print(mod(e1^(k),p))
+print(mod(a^(r),p))
+
+
+#Problem stmt. g^k cong a (p) and g,a,p are public key, so there are chances to deduce k using discrete log. But it's not true for 'p' are very large than indices table is not feasible to be created. But if 'p' is small...
+#Shank's baby foot Giant foot algorithm where 's'=sqrt(p-1). For baby foot 0<= i < s; For Giant foot 1<= j <=s; 'x' = js-i for g^x cong a (p)
