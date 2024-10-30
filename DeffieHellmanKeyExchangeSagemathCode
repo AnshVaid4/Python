@@ -1,0 +1,23 @@
+'''
+Deffie Hellman key exchange
+
+where 101 is prime number known between twor parties and (primitive root, mod calculation) is used as key pair to be shared between two parties
+to deduce a mutuall key that is used for encryption
+'''
+
+
+#A
+Apriv=247589
+print('A share: ',mod(11^Apriv,101))
+Ashare=mod(11^Apriv,101)
+
+#B
+Bpriv=8465872
+print('B share: ',mod(11^Bpriv,101))
+Bshare=mod(11^Bpriv,101)
+
+print()
+print()
+
+print('A mutual key',mod(Bshare^Apriv,101))
+print('B mutual key',mod(Ashare^Bpriv,101))
